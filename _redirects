@@ -1,0 +1,6 @@
+/download          /download.html  200
+/docs              /docs.html  200
+/about             /about.html  200
+/download/windows  https://github.com/zous168/deepseek-harness-client/releases/download/desktop-v0.1.0-rc.10/DeepSeek.Harness-0.1.0-rc.10-win-x64.exe  302
+/download/macos    https://github.com/zous168/deepseek-harness-client/releases/download/desktop-v0.1.0-rc.10/DeepSeek.Harness-0.1.0-rc.10-mac-arm64.dmg  302
+/download/linux    https://github.com/zous168/deepseek-harness-client/releases/download/desktop-v0.1.0-rc.10/DeepSeek.Harness-0.1.0-rc.10-linux-x86_64.AppImage  302
