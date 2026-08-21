@@ -4,9 +4,9 @@
 
 产品源码在 [zous168/deepseek-harness-client](https://github.com/zous168/deepseek-harness-client)。本仓库不投影 `docs/`，也不改产品文档站。
 
-## 本地预览
+GitHub Pages：<https://zous168.github.io/deepseek-harness-site/>
 
-任意静态服务器即可，例如：
+## 本地预览
 
 ```sh
 npx --yes serve .
@@ -14,9 +14,9 @@ npx --yes serve .
 
 ## 发布
 
-接到 Cloudflare Pages：构建命令留空，输出目录为仓库根。域名绑 `deepseek-harness.net.cn`，`www` 做 301。
+推 `main` 后由 `.github/workflows/pages.yml` 发布。链接用相对路径，项目页和自定义域名都能打开。
 
-`/download/windows` 在 `_redirects` 里指向当前 Windows 安装包。发新版时只改这一行。
+发新桌面包时，改 `download/windows/index.html`、`download/macos/index.html`、`download/linux/index.html` 里的跳转地址。
 
 ## 当前安装包
 
