@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeepSeek Harness 能做什么</title>
+  <meta name="description" content="桌面窗口、Web UI、命令行与 Python SDK 共用一套插件化 Agent 运行时。">
+  <link rel="canonical" href="https://deepseek-harness.net.cn/product">
+  <link rel="icon" href="../assets/icon.svg">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="wrap top">
+    <a class="brand" href="../">
+      <img src="../assets/icon.svg" alt="">
+      DeepSeek Harness
+    </a>
+    <nav>
+      <a href="../download/">下载</a>
+      <a href="./" aria-current="page">产品</a>
+      <a href="../docs/">文档</a>
+      <a href="../about/">关于</a>
+    </nav>
+  </header>
+
+  <main class="wrap page">
+    <p class="kicker">Product</p>
+    <h1>一套运行时，多种入口</h1>
+    <p class="lead">一切皆插件。你在桌面窗口里做的事，和浏览器、命令行、Python 调用的是同一套能力。</p>
+
+    <div class="stack">
+      <article class="card">
+        <h2>桌面窗口</h2>
+        <p>打包后的 Electron 窗口加载 Web UI：会话、工作区、审批、计划模式。本站主推这条路，不必先装 Node。</p>
+        <p><a href="../download/windows/">下载 Windows 桌面版</a></p>
+      </article>
+      <article class="card">
+        <h2>浏览器 Web</h2>
+        <p>本机启动 Web UI，默认 <code>http://127.0.0.1:3080</code>。已有 Node 时可用 <code>npx @deepseek-ai/dsh web</code>。</p>
+      </article>
+      <article class="card">
+        <h2>命令行与自动化</h2>
+        <p>headless 跑单次任务，ACP 给自动化客户端。适合脚本和流水线，不经过窗口。</p>
+      </article>
+      <article class="card">
+        <h2>Python SDK</h2>
+        <p>把同一套循环嵌进自己的程序。从 <a href="../docs/">文档枢纽</a> 进 Python 指南。</p>
+      </article>
+      <article class="card">
+        <h2>插件扩展</h2>
+        <p>工具、技能、子代理、沙箱、权限都是插件。不要改 agent-loop。以后资源库会收录验证过的 Skill、MCP 和插件，现在先看开发文档。</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="wrap foot">
+    <div class="foot-grid">
+      <div>
+        <h2>DeepSeek Harness</h2>
+        <p>开发者预览，接口还会变。</p>
+      </div>
+      <div>
+        <h2>本站</h2>
+        <p><a href="../download/">下载</a></p>
+        <p><a href="./">产品</a></p>
+        <p><a href="../docs/">文档</a></p>
+        <p><a href="../about/">关于</a></p>
+      </div>
+      <div>
+        <h2>源码</h2>
+        <p><a href="https://github.com/deepseek-ai/deepseek-harness">官方仓库</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

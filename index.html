@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>下载 DeepSeek Harness 桌面版</title>
-  <meta name="description" content="在 Windows 上下载 DeepSeek Harness 桌面版，在自己的电脑上运行 DeepSeek Agent。">
+  <meta name="description" content="DeepSeek Harness 中文入口。下载 Windows 桌面版，在自己的电脑上运行 DeepSeek Agent：读改仓库、跑命令、走审批。">
   <link rel="canonical" href="https://deepseek-harness.net.cn/">
   <link rel="icon" href="assets/icon.svg">
   <link rel="stylesheet" href="assets/site.css">
@@ -16,38 +16,103 @@
       DeepSeek Harness
     </a>
     <nav>
-      <a href="download/">其他系统</a>
+      <a href="download/">下载</a>
+      <a href="product/">产品</a>
       <a href="docs/">文档</a>
       <a href="about/">关于</a>
     </nav>
   </header>
 
-  <main class="wrap hero">
-    <div>
-      <p class="kicker">Desktop · 0.1.0-rc.10</p>
-      <h1>下载桌面版，在自己的电脑上运行 Agent</h1>
-      <p class="lead">DeepSeek Harness 是开源的插件化 Agent 运行时。官网优先提供 Windows 安装包，装好即可打开窗口，不必先配 Node。</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="download/windows/">下载 Windows 桌面版</a>
-        <a class="btn btn-ghost" href="download/">macOS / Linux</a>
+  <main>
+    <section class="wrap hero">
+      <div>
+        <p class="kicker">Desktop · 0.1.0-rc.10 · 开发者预览</p>
+        <h1>下载桌面版，在自己的电脑上运行 Agent</h1>
+        <p class="lead">DeepSeek Harness 是开源的插件化 Agent 运行时。官网优先提供 Windows 安装包：装好打开窗口即可，不必先配 Node。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="download/windows/">下载 Windows 桌面版</a>
+          <a class="btn btn-ghost" href="download/">macOS / Linux</a>
+        </div>
+        <p class="note">安装包约 390MB，未签名，系统可能提示未知发布者。需要 <a href="https://platform.deepseek.com/">DeepSeek API Key</a>。</p>
       </div>
-      <p class="note">安装包约 390MB，未签名，系统可能提示未知发布者。装好后在设置里填入 DeepSeek API Key。</p>
-    </div>
-    <aside class="window" aria-hidden="true">
-      <div class="window-bar">
-        <span>DeepSeek Harness</span>
-        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <aside class="window" aria-hidden="true">
+        <div class="window-bar">
+          <span>DeepSeek Harness</span>
+          <span class="dots"><i></i><i></i><i></i></span>
+        </div>
+        <div class="window-body">
+          <p>本地窗口 · 与 Web 同一套能力</p>
+          <strong>读仓库、改文件、跑命令、走审批。</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="wrap band">
+      <h2>装完这三步就能发消息</h2>
+      <dl class="steps">
+        <dt>01</dt>
+        <dd>安装桌面版，打开 DeepSeek Harness 窗口。</dd>
+        <dt>02</dt>
+        <dd>打开设置 → 模型，填入 DeepSeek API Key 并保存。不必重启。</dd>
+        <dt>03</dt>
+        <dd>选择工作区（你的项目目录）。选中之前输入框不可用。</dd>
+      </dl>
+    </section>
+
+    <section class="wrap band">
+      <h2>它实际在干什么</h2>
+      <div class="split">
+        <article class="card">
+          <h3>对着仓库做事</h3>
+          <p>读取和编辑工作区文件，运行命令，维护计划。权限策略要求时，会先问你。</p>
+        </article>
+        <article class="card">
+          <h3>用插件扩展</h3>
+          <p>工具、技能、子代理、沙箱都是插件，不是改内核。同一套能力覆盖桌面、浏览器和命令行。</p>
+        </article>
       </div>
-      <div class="window-body">
-        <p>本地窗口 · 同一套 Web 能力</p>
-        <strong>读仓库、改文件、跑命令、走审批。</strong>
+    </section>
+
+    <section class="wrap band">
+      <h2>四种入口，桌面优先</h2>
+      <div class="split">
+        <article class="card">
+          <h3>桌面</h3>
+          <p>无边框窗口加载同一套 Web UI。这是本站主推的用法。</p>
+        </article>
+        <article class="card">
+          <h3>Web / CLI / Python</h3>
+          <p><code>npx @deepseek-ai/dsh web</code>、headless 任务、Python SDK。说明在 <a href="product/">产品</a> 与 <a href="docs/">文档</a>。</p>
+        </article>
       </div>
-    </aside>
+    </section>
+
+    <section class="wrap band">
+      <h2>使用前请知道</h2>
+      <p class="warn">当前是开发者预览，接口还会变。本站是中文入口，不是 DeepSeek 公司官网。源码与兼容性以 <a href="https://github.com/deepseek-ai/deepseek-harness">deepseek-ai/deepseek-harness</a> 为准。</p>
+    </section>
   </main>
 
   <footer class="wrap foot">
-    <p>本站是 DeepSeek Harness 中文入口，不是 DeepSeek 公司官网。</p>
-    <p>源码以 <a href="https://github.com/deepseek-ai/deepseek-harness">GitHub</a> 为准。安装包发布在 <a href="https://github.com/zous168/deepseek-harness-client/releases/tag/desktop-v0.1.0-rc.10">desktop-v0.1.0-rc.10</a>。</p>
+    <div class="foot-grid">
+      <div>
+        <h2>DeepSeek Harness</h2>
+        <p>在自己的电脑上运行 Agent。</p>
+        <p>安装包 0.1.0-rc.10 · 未签名</p>
+      </div>
+      <div>
+        <h2>本站</h2>
+        <p><a href="download/">下载</a></p>
+        <p><a href="product/">产品</a></p>
+        <p><a href="docs/">文档</a></p>
+        <p><a href="about/">关于</a></p>
+      </div>
+      <div>
+        <h2>源码</h2>
+        <p><a href="https://github.com/deepseek-ai/deepseek-harness">官方仓库</a></p>
+        <p><a href="https://github.com/zous168/deepseek-harness-client/releases/tag/desktop-v0.1.0-rc.10">桌面发布页</a></p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

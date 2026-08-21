@@ -70,7 +70,7 @@ nav a:hover { color: var(--ink); }
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
   gap: 48px;
   align-items: end;
-  padding-block: 56px 40px;
+  padding-block: 56px 32px;
 }
 
 .kicker {
@@ -89,7 +89,13 @@ h1 {
   font-weight: 650;
 }
 
-.lead { margin: 0 0 28px; color: var(--mute); max-width: 36em; }
+h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+}
+
+.lead { margin: 0 0 28px; color: var(--mute); max-width: 38em; }
 
 .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 
@@ -144,10 +150,36 @@ h1 {
 .window-body p { margin: 0 0 8px; color: #9aa3c2; font-size: 13px; }
 .window-body strong { color: #fff; font-size: 22px; letter-spacing: -0.03em; }
 
-.page { padding-block: 40px 72px; }
+.band {
+  padding-block: 36px;
+  border-top: 1px solid var(--line);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  margin: 0;
+}
+
+.steps dt {
+  font-variant-numeric: tabular-nums;
+  color: var(--signal);
+  font-weight: 700;
+}
+
+.steps dd { margin: 0 0 12px; color: var(--mute); }
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.page { padding-block: 40px 24px; }
 .page h1 { font-size: clamp(28px, 4vw, 40px); }
 
-.stack { display: grid; gap: 20px; }
+.stack { display: grid; gap: 16px; }
 .card {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -155,9 +187,11 @@ h1 {
   padding: 18px 20px;
 }
 
-.card h2 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.02em; }
+.card h2, .card h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.02em; }
 .card p, .card li { color: var(--mute); }
 .card a { color: var(--signal); }
+
+.wide { grid-column: 1 / -1; }
 
 .warn {
   background: var(--warn-fill);
@@ -172,14 +206,23 @@ h1 {
 
 .foot {
   border-top: 1px solid var(--line);
-  padding-block: 22px 36px;
+  padding-block: 28px 40px;
   color: var(--mute);
   font-size: 13px;
 }
 
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 24px;
+}
+
 .foot p { margin: 0 0 6px; }
+.foot a { color: var(--ink); text-decoration: none; }
+.foot a:hover { color: var(--signal); }
+.foot h2 { font-size: 13px; margin: 0 0 10px; color: var(--ink); }
 
 @media (max-width: 800px) {
-  .hero { grid-template-columns: 1fr; padding-block: 36px 28px; }
+  .hero, .split, .foot-grid { grid-template-columns: 1fr; }
   .top { align-items: flex-start; flex-direction: column; }
 }

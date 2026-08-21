@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DeepSeek Harness 桌面版下载：Windows / macOS / Linux</title>
-  <meta name="description" content="下载 DeepSeek Harness 桌面安装包。Windows 为主要入口，同时提供 macOS 与 Linux。">
+  <meta name="description" content="下载 DeepSeek Harness 桌面安装包。Windows 为主要入口。装完后填 API Key、选工作区。">
   <link rel="canonical" href="https://deepseek-harness.net.cn/download">
   <link rel="icon" href="../assets/icon.svg">
   <link rel="stylesheet" href="../assets/site.css">
@@ -17,6 +17,7 @@
     </a>
     <nav>
       <a href="./" aria-current="page">下载</a>
+      <a href="../product/">产品</a>
       <a href="../docs/">文档</a>
       <a href="../about/">关于</a>
     </nav>
@@ -25,28 +26,28 @@
   <main class="wrap page">
     <p class="kicker">Installers · 0.1.0-rc.10</p>
     <h1>桌面版下载</h1>
-    <p class="lead">主推 Windows。其他系统与命令行入口写在本页，不替代安装包。</p>
-    <p class="warn">开发者预览，接口还会变。Windows 安装包未签名；装好后打开设置 → 模型，填入 <a href="https://platform.deepseek.com/">DeepSeek API Key</a>，再选择工作区。</p>
+    <p class="lead">主推 Windows。其他系统与命令行写在本页下半，不替代安装包。</p>
+    <p class="warn">开发者预览。Windows 包未签名。装好后：设置 → 模型 → 填 <a href="https://platform.deepseek.com/">DeepSeek API Key</a> → 选择工作区，才能发消息。</p>
 
     <div class="stack" style="margin-top: 28px">
       <article class="card">
         <h2>Windows x64</h2>
-        <p>NSIS 安装程序，默认装到 Program Files。</p>
+        <p>NSIS 安装程序，默认装到 Program Files，需要管理员权限。约 390MB。</p>
         <p><a class="btn btn-primary" href="windows/">下载 .exe</a></p>
       </article>
       <article class="card">
         <h2>macOS Apple Silicon</h2>
-        <p>未签名 DMG，打开时需在系统设置里允许。</p>
+        <p>未签名 DMG。打开时若被拦截，到系统设置里允许这张盘。</p>
         <p><a class="btn btn-ghost" href="macos/">下载 .dmg</a></p>
       </article>
       <article class="card">
         <h2>Linux x64</h2>
-        <p>AppImage，下载后加上可执行权限即可运行。</p>
+        <p>AppImage。下载后 <code>chmod +x</code> 再运行。</p>
         <p><a class="btn btn-ghost" href="linux/">下载 AppImage</a></p>
       </article>
       <article class="card">
-        <h2>Web 与命令行</h2>
-        <p>已有 Node 22.19+ 时可以不装桌面包：</p>
+        <h2>没有安装包时</h2>
+        <p>已有 Node 22.19 或 24、以及 pnpm：</p>
         <ul class="list">
           <li><code>npx @deepseek-ai/dsh web</code> — 浏览器打开本地 Web UI</li>
           <li>源码：<code>pnpm install</code>、<code>pnpm run build</code>、<code>pnpm dsh desktop</code></li>
@@ -57,7 +58,23 @@
   </main>
 
   <footer class="wrap foot">
-    <p>发新版时改 <code>download/windows/index.html</code> 等三个跳转页的目标地址。</p>
+    <div class="foot-grid">
+      <div>
+        <h2>DeepSeek Harness</h2>
+        <p>短链会在 Worker 挂上后指向同一批安装包。</p>
+      </div>
+      <div>
+        <h2>本站</h2>
+        <p><a href="./">下载</a></p>
+        <p><a href="../product/">产品</a></p>
+        <p><a href="../docs/">文档</a></p>
+        <p><a href="../about/">关于</a></p>
+      </div>
+      <div>
+        <h2>源码</h2>
+        <p><a href="https://github.com/deepseek-ai/deepseek-harness">官方仓库</a></p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
