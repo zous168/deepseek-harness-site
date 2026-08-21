@@ -1,0 +1,14 @@
+name = "deepseek-harness-site"
+main = "worker/src/index.ts"
+compatibility_date = "2026-08-21"
+
+# Bind after the zone is on Cloudflare:
+# routes = [
+#   { pattern = "deepseek-harness.net.cn/api/*", zone_name = "deepseek-harness.net.cn" },
+#   { pattern = "deepseek-harness.net.cn/download/windows", zone_name = "deepseek-harness.net.cn" },
+#   { pattern = "deepseek-harness.net.cn/download/macos", zone_name = "deepseek-harness.net.cn" },
+#   { pattern = "deepseek-harness.net.cn/download/linux", zone_name = "deepseek-harness.net.cn" },
+# ]
+#
+# Later community features (search, ranks) add KV / D1 here. Do not add
+# user accounts until the editorial catalog already has verified entries.

@@ -12,11 +12,27 @@ GitHub Pages：<https://zous168.github.io/deepseek-harness-site/>
 npx --yes serve .
 ```
 
+## 两层：Pages 与 Worker
+
+| 放哪 | 做什么 |
+|---|---|
+| GitHub Pages（静态 HTML） | 首页、关于、文档分流、下载说明 |
+| Cloudflare Worker | 安装包 302、`/api/installers`、以后的资源库检索与榜单 |
+
+Worker 源码在 `worker/`。安装包地址只改 `worker/src/installers.ts`。静态页里的跳转是 Worker 未挂上时的后备。
+
+域名进 Cloudflare 之后，把 `wrangler.toml` 里的 `routes` 打开：`/api/*` 和 `/download/{windows,macos,linux}` 走 Worker，其余仍是 Pages。账号、点赞、未审投稿先不要做。
+
+```sh
+pnpm install
+pnpm run worker:dev
+```
+
+本机默认 <http://127.0.0.1:8787/api/health> 与 <http://127.0.0.1:8787/download/windows>。账号登录后 `pnpm run worker:deploy`。
+
 ## 发布
 
-推 `main` 后由 `.github/workflows/pages.yml` 发布。链接用相对路径，项目页和自定义域名都能打开。
-
-发新桌面包时，改 `download/windows/index.html`、`download/macos/index.html`、`download/linux/index.html` 里的跳转地址。
+推 `main` 后由 `.github/workflows/pages.yml` 发布静态页。Worker 需另一次 `wrangler deploy`。
 
 ## 当前安装包
 
